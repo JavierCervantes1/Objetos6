@@ -362,6 +362,12 @@ public class Principal extends javax.swing.JFrame {
         txtResultado1.setText("");
         txtResultado2.setText("");
         txtMax.requestFocusInWindow();
+        cmdCrear.setEnabled(true);
+        cmdAjustar.setEnabled(false);
+        cmdMostrar.setEnabled(false);
+        cmdLlenar.setEnabled(false);
+        cmdServir.setEnabled(false);
+        cmdVaciar.setEnabled(false);
         
         
         
