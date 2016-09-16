@@ -391,7 +391,7 @@ public class Principal extends javax.swing.JFrame {
         f3 = c.Ajuste(f2);
         
         txtResultado2.setText("" + f3.Mostrar());
-        txtResultado1.setText("" + c.Mostrar());
+        txtResultado1.setText("");
         
         cmdCrear.setEnabled(false);
         cmdAjustar.setEnabled(true);
