@@ -72,6 +72,14 @@ public class Cafetera {
         c = new Cafetera(CapacidadTaza,CantidadActualCafe);
         return c;
     }
+    public Cafetera Ajuste(Cafetera f2){
+        int aux;
+    if (f2.getCantidadActual() < f2.getCapacidadMaxima()) {
+            aux = f2.getCapacidadMaxima();
+            f2.setCantidadActual(aux);
+        }
+    return f2;
+    }
     
     public void Vaciar(int aux) {
         aux = this.getCantidadActual() - this.getCantidadActual();

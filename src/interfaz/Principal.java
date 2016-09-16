@@ -26,6 +26,7 @@ public class Principal extends javax.swing.JFrame {
         cmdLlenar.setEnabled(false);
         cmdServir.setEnabled(false);
         cmdVaciar.setEnabled(false);
+        cmdAjuste.setEnabled(false);
     }
 
     /**
@@ -55,6 +56,7 @@ public class Principal extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         cmdServir = new javax.swing.JButton();
+        cmdAjuste = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtResultado1 = new javax.swing.JTextArea();
@@ -145,6 +147,14 @@ public class Principal extends javax.swing.JFrame {
             }
         });
         jPanel3.add(cmdServir, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 100, -1));
+
+        cmdAjuste.setText("Llenar");
+        cmdAjuste.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmdAjusteActionPerformed(evt);
+            }
+        });
+        jPanel3.add(cmdAjuste, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, 100, -1));
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 20, 270, 220));
 
@@ -337,6 +347,7 @@ public class Principal extends javax.swing.JFrame {
         cmdLlenar.setEnabled(true);
         cmdServir.setEnabled(false);
         cmdVaciar.setEnabled(true);
+        cmdAjuste.setEnabled(true);
         JOptionPane.showMessageDialog(this, "Taza de café servida exitosamente", "Informacion", 1);
         }
     }//GEN-LAST:event_cmdServirActionPerformed
@@ -372,6 +383,25 @@ public class Principal extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_cmdLimpiarActionPerformed
+
+    private void cmdAjusteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdAjusteActionPerformed
+        // TODO add your handling code here:
+        f2 = new Cafetera(MaxCafe, ActualCafe);
+        
+        f3 = c.Ajuste(f2);
+        
+        txtResultado2.setText("" + f3.Mostrar());
+        txtResultado1.setText("" + c.Mostrar());
+        
+        cmdCrear.setEnabled(false);
+        cmdAjustar.setEnabled(true);
+        cmdMostrar.setEnabled(true);
+        cmdLlenar.setEnabled(true);
+        cmdServir.setEnabled(false);
+        cmdVaciar.setEnabled(true);
+        cmdAjuste.setEnabled(false);
+        JOptionPane.showMessageDialog(this, "Se ha servido lo que quede en la taza de café exitosamente", "Informacion", 1);
+    }//GEN-LAST:event_cmdAjusteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -410,6 +440,7 @@ public class Principal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton cmdAjustar;
+    private javax.swing.JButton cmdAjuste;
     private javax.swing.JButton cmdCrear;
     private javax.swing.JButton cmdLimpiar;
     private javax.swing.JButton cmdLlenar;
